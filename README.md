@@ -7,18 +7,29 @@ This code is outdated and not secure, do not use it if you concern about your da
 
 ### How to build
 ```
-docker-compose build
-docker-compose up -d
+docker build
 ```
 
 ### How to run
 ```
-docker-compose up -d
+docker compose up -d
+```
+After running the docker you must go to localhost to see the openjeeb web interface:
+```
+http://localhost
+```
+if you like you can set a host name for it, you should modify the hosts file of your operating system and add this line to it:
+```
+127.0.0.1 jeeb.local
+```
+after that you can access it like this:
+```
+http://jeeb.local
 ```
 
 ### How to stop
 ```
-docker-compose down
+docker down
 ```
 > To stop all containers AND kill all volumes `docker-compose down --volumes`
 
