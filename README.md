@@ -29,9 +29,9 @@ http://jeeb.local
 
 ### How to stop
 ```
-docker down
+docker compose down
 ```
-> To stop all containers AND kill all volumes `docker-compose down --volumes`
+> To stop all containers AND kill all volumes `docker compose down --volumes`
 
 ### How to import the data
 if you have a sql export, you should replace the export.sql file with your export file.
