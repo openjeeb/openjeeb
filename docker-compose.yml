@@ -1,0 +1,56 @@
+services:
+  php:
+    build: ./php
+    ports:
+      - "80:80"
+    volumes:
+      - ./htdocs:/var/www/html
+    depends_on:
+      mysql:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+    networks:
+      - lamp-network
+    container_name: jeeb_php
+
+  mysql:
+    image: registry.docker.ir/mysql:5.6
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./jeeb.sql:/docker-entrypoint-initdb.d/01-jeeb.sql
+      - ./export.sql:/docker-entrypoint-initdb.d/02-export.sql
+    environment:
+      - MYSQL_ROOT_PASSWORD=roottttttt000
+      - MYSQL_DATABASE=jeeb
+      - MYSQL_USER=jeeb
+      - MYSQL_PASSWORD=JeebPassword
+    ports:
+      - "3306:3306"
+    networks:
+      - lamp-network
+    container_name: jeeb_mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  rabbitmq:
+    image: rabbitmq:3.13.7
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - lamp-network
+    container_name: jeeb_rabbitmq
+
+volumes:
+  mysql-data:
+
+networks:
+  lamp-network:
+    driver: bridge

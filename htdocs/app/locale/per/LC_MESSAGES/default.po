@@ -1,0 +1,208 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"POT-Creation-Date: 2011-03-01 22:33+0330\n"
+"PO-Revision-Date: 2013-02-14 18:00+0330\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Persian\n"
+"X-Poedit-Country: Iran\n"
+
+msgid "jeeb"
+msgstr "جیب"
+
+msgid "yes"
+msgstr "بلی"
+
+msgid "no"
+msgstr "خیر"
+
+msgid "due"
+msgstr "تسویه نشده"
+
+msgid "done"
+msgstr "تسویه شده"
+
+msgid "drawed"
+msgstr "صادر شده"
+
+msgid "received"
+msgstr "دریافتی"
+
+msgid "Saturday"
+msgstr "شنبه"
+
+msgid "Sunday"
+msgstr "یکشنبه"
+
+msgid "Monday"
+msgstr "دوشنبه"
+
+msgid "Tuesday"
+msgstr "سه شنبه"
+
+msgid "Wednesday"
+msgstr "چهارشنبه"
+
+msgid "Thursday"
+msgstr "پنجشنبه"
+
+msgid "Friday"
+msgstr "جمعه"
+
+msgid "debt"
+msgstr "بدهی"
+
+msgid "credit"
+msgstr "طلب"
+
+msgid "month_1"
+msgstr "فروردین"
+
+msgid "month_2"
+msgstr "اردیبهشت"
+
+msgid "month_3"
+msgstr "خرداد"
+
+msgid "month_4"
+msgstr "تیر"
+
+msgid "month_5"
+msgstr "مرداد"
+
+msgid "month_6"
+msgstr "شهریور"
+
+msgid "month_7"
+msgstr "مهر"
+
+msgid "month_8"
+msgstr "آبان"
+
+msgid "month_9"
+msgstr "آذر"
+
+msgid "month_10"
+msgstr "دی"
+
+msgid "month_11"
+msgstr "بهمن"
+
+msgid "month_12"
+msgstr "اسفند"
+
+msgid "1w"
+msgstr "یک هفته‌ای"
+
+msgid "1m"
+msgstr "یک ماهه"
+
+msgid "3m"
+msgstr "سه ماهه"
+
+msgid "6m"
+msgstr "شش ماهه"
+
+msgid "12m"
+msgstr "یک ساله"
+
+msgid "cash"
+msgstr "نقدی"
+
+msgid "deposit"
+msgstr "پس‌ انداز"
+
+msgid "check"
+msgstr "جاری"
+
+msgid "other"
+msgstr "سایر"
+
+msgid "success"
+msgstr "موفق"
+
+msgid "fail"
+msgstr "ناموفق"
+
+msgid "pending"
+msgstr "ناموفق"
+
+msgid "active"
+msgstr "فعال"
+
+msgid "inactive"
+msgstr "غیرفعال"
+
+msgid "note_due"
+msgstr "انجام نشده"
+
+msgid "note_done"
+msgstr "انجام شده"
+
+msgid "email"
+msgstr "پست الکترونیکی"
+
+msgid "sms"
+msgstr "پیامک"
+
+msgid "note"
+msgstr "یادداشت"
+
+msgid "package"
+msgstr "بسته های افزایشی"
+
+msgid "reminder-note"
+msgstr "یادداشت"
+
+msgid "reminder-check"
+msgstr "چک"
+
+msgid "reminder-installment"
+msgstr "قسط وام"
+
+msgid "reminder-loan"
+msgstr "وام"
+
+msgid "reminder-debt"
+msgstr "بدهی طلب"
+
+msgid "plan-bronze"
+msgstr "بسته برنزی"
+
+msgid "plan-silver"
+msgstr "بسته نقره ای"
+
+msgid "plan-gold"
+msgstr "بسته طلائی"
+
+msgid "failed"
+msgstr "ناموفق"
+
+msgid "notset"
+msgstr "تنظیم نشده"
+
+msgid "delivered"
+msgstr "رسیده"
+
+msgid "faileddelivery"
+msgstr "ناموفق در مخابرات"
+
+msgid "pending"
+msgstr "در انتظار"
+
+msgid "sending"
+msgstr "در حال ارسال"
+
+msgid "sent"
+msgstr "ارسال شده"
+
+msgid "blocked"
+msgstr "از طرف مخاطب مسدود شده"
+
+msgid "part"
+msgstr "قسمتی تسویه شده"
