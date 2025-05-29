@@ -510,7 +510,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   PRIMARY KEY (`id`),
   KEY `FK_ACCOUNT_USER` (`user_id`),
   KEY `FK_ACCOUNT_BANK` (`bank_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=114807 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -530,7 +530,7 @@ CREATE TABLE IF NOT EXISTS `acos` (
   KEY `parent_id` (`parent_id`),
   KEY `foreign_key` (`foreign_key`),
   KEY `foreign_key_2` (`foreign_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=532 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -549,7 +549,7 @@ CREATE TABLE IF NOT EXISTS `applications` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_code` (`user_code`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=199646 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -571,7 +571,7 @@ CREATE TABLE IF NOT EXISTS `application_orders` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_APPLICATION_ORDER_APPLICATION` (`application_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=6004231 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -591,7 +591,7 @@ CREATE TABLE IF NOT EXISTS `aros` (
   KEY `parent_id` (`parent_id`),
   KEY `foreign_key` (`foreign_key`),
   KEY `foreign_key_2` (`foreign_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=32509 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -609,7 +609,7 @@ CREATE TABLE IF NOT EXISTS `aros_acos` (
   `_delete` varchar(2) COLLATE utf8_persian_ci NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `ARO_ACO_KEY` (`aro_id`,`aco_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -624,7 +624,7 @@ CREATE TABLE IF NOT EXISTS `banks` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=50 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -646,7 +646,7 @@ CREATE TABLE IF NOT EXISTS `budgets` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `expense_category_id` (`expense_category_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14646 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 --
 -- Triggers `budgets`
@@ -712,7 +712,7 @@ CREATE TABLE IF NOT EXISTS `checks` (
   KEY `FK_CHECK_BANK` (`bank_id`),
   KEY `FK_CHECK_ACCOUNT` (`account_id`),
   KEY `FK_CHECK_INDIVIDUAL` (`individual_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=56984 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -727,7 +727,7 @@ CREATE TABLE IF NOT EXISTS `check_tags` (
   PRIMARY KEY (`id`),
   KEY `tag_id` (`tag_id`),
   KEY `check_id` (`check_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=4635 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -743,7 +743,7 @@ CREATE TABLE IF NOT EXISTS `configs` (
   `type` enum('boolean','integer','double','string','array','object','resource') COLLATE utf8_persian_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`,`key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=296335 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -758,7 +758,7 @@ CREATE TABLE IF NOT EXISTS `currencies` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -779,7 +779,7 @@ CREATE TABLE IF NOT EXISTS `currency_rates` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_CURRENCY_RATE_CURRENCY` (`currency_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=2862 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -806,7 +806,7 @@ CREATE TABLE IF NOT EXISTS `debts` (
   PRIMARY KEY (`id`),
   KEY `FK_DEBT_USER` (`user_id`),
   KEY `FK_DEBT_INDIVIDUAL` (`individual_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=279443 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -826,7 +826,7 @@ CREATE TABLE IF NOT EXISTS `debt_settlements` (
   KEY `FK_DEBT_SETTLEMENT_DEBT` (`debt_id`),
   KEY `FK_DEBT_SETTLEMENT_TRANSACTION` (`transaction_id`),
   KEY `FK_DEBT_SETTLEMENT_USER` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=220271 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -841,7 +841,7 @@ CREATE TABLE IF NOT EXISTS `debt_tags` (
   PRIMARY KEY (`id`),
   KEY `debt_id` (`debt_id`),
   KEY `tag_id` (`tag_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=19196 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -862,7 +862,7 @@ CREATE TABLE IF NOT EXISTS `discount_codes` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `code` (`code`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=3179 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -886,7 +886,7 @@ CREATE TABLE IF NOT EXISTS `expenses` (
   KEY `FK_EXPENSE_USER` (`user_id`),
   KEY `FK_EXPENSE_TRANSACTION` (`transaction_id`),
   KEY `FK_EXPENSE_INDIVIDUAL` (`individual_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=4573201 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -905,7 +905,7 @@ CREATE TABLE IF NOT EXISTS `expense_categories` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_EXPENSE_CATEGORY_USER` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=866714 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -923,7 +923,7 @@ CREATE TABLE IF NOT EXISTS `expense_sub_categories` (
   PRIMARY KEY (`id`),
   KEY `FK_EXPENSE_SUB_CATEGORY_EXPENSE_CATEGORY` (`expense_category_id`),
   KEY `FK_EXPENSE_SUB_CATEGORY_USER` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=4244929 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -938,7 +938,7 @@ CREATE TABLE IF NOT EXISTS `expense_tags` (
   PRIMARY KEY (`id`),
   KEY `FK_EXPENSE_TAG_EXPENSE` (`expense_id`),
   KEY `FK_EXPENSE_TAG_TAG` (`tag_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -962,7 +962,7 @@ CREATE TABLE IF NOT EXISTS `incomes` (
   KEY `FK_INCOME_TRANSACTION` (`transaction_id`),
   KEY `FK_INCOME_INCOME_SUB_TYPE` (`income_sub_type_id`),
   KEY `FK_INCOME_INDIVIDUAL` (`individual_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1012302 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -980,7 +980,7 @@ CREATE TABLE IF NOT EXISTS `income_sub_types` (
   PRIMARY KEY (`id`),
   KEY `FK_INCOME_SUB_TYPE_INCOME_TYPE` (`income_type_id`),
   KEY `FK_INCOME_SUB_TYPE_USER` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=21390 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -999,7 +999,7 @@ CREATE TABLE IF NOT EXISTS `income_types` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_INCOME_TYPE_USER` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=558051 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1018,7 +1018,7 @@ CREATE TABLE IF NOT EXISTS `individuals` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_INDIVIDUAL_USER` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=75625 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1044,7 +1044,7 @@ CREATE TABLE IF NOT EXISTS `installments` (
   PRIMARY KEY (`id`),
   KEY `FK_INSTALLMENT_USER` (`user_id`),
   KEY `FK_INSTALLMENT_LOAN` (`loan_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=954268 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Triggers `installments`
@@ -1086,7 +1086,7 @@ CREATE TABLE IF NOT EXISTS `investments` (
   PRIMARY KEY (`id`),
   KEY `FK_INVESTMENT_USER` (`user_id`),
   KEY `FK_INVESTMENT_CURRENCY` (`currency_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=3565 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1106,7 +1106,7 @@ CREATE TABLE IF NOT EXISTS `invitations` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`,`user_id`),
   KEY `FK_INVITATION_USER` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=199690 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1129,7 +1129,7 @@ CREATE TABLE IF NOT EXISTS `loans` (
   PRIMARY KEY (`id`),
   KEY `FK_LOAN_USER` (`user_id`),
   KEY `FK_LOAN_BANK` (`bank_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=27724 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1144,7 +1144,7 @@ CREATE TABLE IF NOT EXISTS `loan_tags` (
   PRIMARY KEY (`id`),
   KEY `loan_id` (`loan_id`),
   KEY `tag_id` (`tag_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1660 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1169,7 +1169,7 @@ CREATE TABLE IF NOT EXISTS `newsletters` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=95 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1189,7 +1189,7 @@ CREATE TABLE IF NOT EXISTS `notes` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=18749 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1220,7 +1220,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   KEY `created` (`created`),
   KEY `result` (`result`),
   KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=62817 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1237,7 +1237,7 @@ CREATE TABLE IF NOT EXISTS `packages` (
   `todate` datetime DEFAULT NULL,
   `status` set('active','inactive') COLLATE utf8_persian_ci NOT NULL DEFAULT 'active',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1254,7 +1254,7 @@ CREATE TABLE IF NOT EXISTS `package_services` (
   `duration` varchar(16) COLLATE utf8_persian_ci DEFAULT NULL COMMENT 'Like 1 MONTH, 30 DAY. will be used in interval',
   PRIMARY KEY (`id`),
   KEY `package_id` (`package_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1291,7 +1291,7 @@ CREATE TABLE IF NOT EXISTS `reminders` (
   KEY `user_id` (`user_id`,`type`,`reference_id`),
   KEY `deleted` (`deleted`),
   KEY `owner` (`owner`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=3760418 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1321,7 +1321,7 @@ CREATE TABLE IF NOT EXISTS `reminder_logs` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `user_id_2` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1805005 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1343,7 +1343,7 @@ CREATE TABLE IF NOT EXISTS `reminder_settings` (
   `active` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1365,7 +1365,7 @@ CREATE TABLE IF NOT EXISTS `resellers` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=3124 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1385,7 +1385,7 @@ CREATE TABLE IF NOT EXISTS `reseller_settlements` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_RESELLER_SETTLEMENT_RESELLER` (`reseller_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=120 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1402,7 +1402,7 @@ CREATE TABLE IF NOT EXISTS `services` (
   `status` set('active','inactive') COLLATE utf8_persian_ci NOT NULL DEFAULT 'active',
   PRIMARY KEY (`id`),
   KEY `identifier` (`identifier`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1424,7 +1424,7 @@ CREATE TABLE IF NOT EXISTS `service_transactions` (
   PRIMARY KEY (`id`),
   KEY `service_id` (`service_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=85105 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1444,7 +1444,7 @@ CREATE TABLE IF NOT EXISTS `sms_reads` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `identifier` (`identifier`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=10809 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1461,7 +1461,7 @@ CREATE TABLE IF NOT EXISTS `tags` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_TAG_USER` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=46004 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1477,7 +1477,7 @@ CREATE TABLE IF NOT EXISTS `tag_folders` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_TAG_FOLDER_USER` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1496,7 +1496,7 @@ CREATE TABLE IF NOT EXISTS `temp_users` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=4138 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1513,7 +1513,7 @@ CREATE TABLE IF NOT EXISTS `tokens` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=119238 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1540,7 +1540,7 @@ CREATE TABLE IF NOT EXISTS `transactions` (
   KEY `FK_TRANSACTION_USER` (`user_id`),
   KEY `FK_TRANSACTION_EXPENSE` (`expense_id`),
   KEY `FK_TRANSACTION_INCOME` (`income_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=6465015 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Triggers `transactions`
@@ -1577,7 +1577,7 @@ CREATE TABLE IF NOT EXISTS `transaction_tags` (
   PRIMARY KEY (`id`),
   KEY `tag_id` (`tag_id`),
   KEY `transaction_id` (`transaction_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=438704 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1593,7 +1593,7 @@ CREATE TABLE IF NOT EXISTS `transfers` (
   PRIMARY KEY (`id`),
   KEY `transaction_credit_id` (`transaction_credit_id`),
   KEY `transaction_debt_id` (`transaction_debt_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=378463 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1628,7 +1628,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   KEY `FK_USER_USER_GROUP` (`user_group_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=542625 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -1643,7 +1643,7 @@ CREATE TABLE IF NOT EXISTS `user_groups` (
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Constraints for dumped tables
@@ -2431,7 +2431,7 @@ INSERT INTO `acos` (`id`, `parent_id`, `model`, `foreign_key`, `alias`, `lft`, `
 
 
 INSERT INTO `aros` (`id`, `parent_id`, `model`, `foreign_key`, `alias`, `lft`, `rght`) VALUES
-(1, NULL, 'UserGroup', 1, NULL, NULL, NULL);
+(1, NULL, 'UserGroup', 1, NULL, 1, 2);
 
 INSERT INTO `aros_acos` (`id`, `aro_id`, `aco_id`, `_create`, `_read`, `_update`, `_delete`) VALUES
 (1, 1, 1, '1', '1', '1', '1'),
