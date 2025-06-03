@@ -525,7 +525,7 @@ class UsersController extends AppController {
         $dbPass = escapeshellarg($db['password']);
         $dbName = escapeshellarg($db['database']);
 
-        $tables = 'expenses incomes transactions expense_categories income_types accounts checks debts loans notes investments individuals budgets reminders tags';
+        $tables = 'expenses incomes transactions expense_categories expense_sub_categories income_types income_sub_types accounts checks debts loans installments notes investments individuals budgets reminders tags';
         $where = escapeshellarg('user_id = ' . $userId);
         $dumpFile = APP . 'tmp' . DS . 'export.sql';
 
