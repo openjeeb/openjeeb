@@ -546,7 +546,13 @@ class UsersController extends AppController {
         $cmd = "mysqldump -h mysql -u $dbUser -p$dbPass $dbName $tables --where=$where --no-tablespaces --no-create-info --skip-triggers";
         $restDump = shell_exec($cmd);
 
-        file_put_contents($dumpFile, $deleteSql . $userDump . $arosInsert . $restDump, LOCK_EX);
+        $transfersWhere = escapeshellarg(
+            "transaction_debt_id IN (SELECT id FROM transactions WHERE user_id = $userId) OR transaction_credit_id IN (SELECT id FROM transactions WHERE user_id = $userId)"
+        );
+        $transfersDumpCmd = "mysqldump -u $dbUser -p$dbPass $dbName transfers --where=$transfersWhere --no-tablespaces --no-create-info --skip-triggers";
+        $transfersDump = shell_exec($transfersDumpCmd);
+
+        file_put_contents($dumpFile, $deleteSql . $userDump . $arosInsert . $restDump . $transfersDump, LOCK_EX);
 
         if (file_exists($dumpFile)) {
             $this->autoRender = false;
