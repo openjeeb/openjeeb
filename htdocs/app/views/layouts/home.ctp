@@ -113,19 +113,19 @@ echo $html->docType( 'xhtml-trans' );
                     <img class="ls-bg" src="/img/slide/slide_bg4.jpg" alt="layer"/>
                     <img class="ls-s1" id="earth" style="left:770px;top:-67px;" src="/img/slide/earth.jpg" alt="جهان"/>
                     <a class="ls-s2" style="left:30px;top:40px;delayin:400;durationin:1000;slideDirection:top;"
-                       href="<?php echo $this->Html->url(array('controller' => 'pages', 'action' => 'mobile')); ?>"><img
+                       href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'join')); ?>"><img
                                 src="/img/slide/access_from_everwhere.png" alt="دسترسی به اطلاعات از هر نقطه جهان"/></a>
                     <a class="ls-s3"
                        style="left:570px;top:140px;delayin:600;durationin:900;slideDirection:left;easingIn:easeOutExpo;"
-                       href="<?php echo $this->Html->url(array('controller' => 'pages', 'action' => 'mobile')); ?>"><img
+                       href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'join')); ?>"><img
                                 src="/img/slide/tablet.png" alt="Tablet"/></a>
                     <a class="ls-s4"
                        style="left:340px;top:200px;delayin:800;durationin:900;slideDirection:left;easingIn:easeOutExpo;"
-                       href="<?php echo $this->Html->url(array('controller' => 'pages', 'action' => 'mobile')); ?>"><img
+                       href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'join')); ?>"><img
                                 src="/img/slide/mobile.png" alt="Mobile"/></a>
                     <a class="ls-s5"
                        style="left:150px;top:250px;delayin:1000;durationin:900;slideDirection:left;easingIn:easeOutExpo;"
-                       href="<?php echo $this->Html->url(array('controller' => 'pages', 'action' => 'mobile')); ?>"><img
+                       href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'join')); ?>"><img
                                 src="/img/slide/android_logo.png" alt="Mobile"/></a>
                     <a class="ls-s8 blue_button"
                        style="left:75px;top:150px;delayin:1350;durationin:900;slideDirection:left;easingIn:easeOutExpo;"
